@@ -11,7 +11,7 @@ namespace DartCore.Utilities
             if (value == null)
                 Debug.LogWarning("Tried to save a null value to the \"" + fileName + "\" save file");
 
-            CreateSaveDirectoryIfNecessary();
+            CreateSaveDirectoryIfNecessary(fileName);
 
             var path = GetPathFromFileName(fileName);
 
@@ -57,10 +57,27 @@ namespace DartCore.Utilities
             return Application.persistentDataPath + "/saves/" + fileName + ".save";
         }
 
-        private static void CreateSaveDirectoryIfNecessary()
+        private static void CreateSaveDirectoryIfNecessary(string fileName)
         {
             if (!Directory.Exists(Application.persistentDataPath + "/saves"))
                 Directory.CreateDirectory(Application.persistentDataPath + "/saves");
+
+            // Create the subdirrectories if there are any.
+            if (fileName.Contains("/"))
+            {
+                var dirs = fileName.Split('/');
+                
+                // Last index is the name of the file so we skip it.
+                for (var i = 0; i < dirs.Length - 1; i++)
+                {
+                    var currentPathToCheck = Application.persistentDataPath + "/saves";
+                    for (var j = 0; j <= i; j++)
+                        currentPathToCheck += $"/{dirs[j]}";
+                    
+                    if (!Directory.Exists(currentPathToCheck))
+                        Directory.CreateDirectory(currentPathToCheck);
+                }
+            }
         }
     }
 }

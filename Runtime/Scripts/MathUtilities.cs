@@ -108,17 +108,17 @@ namespace DartCore.Utilities
 
         public static Vector2 RandomVector2()
         {
-            return new Vector2(Random.Range(0, 1), Random.Range(0, 1)).normalized;
+            return new Vector2(Random.Range(-1, 1), Random.Range(-1, 1)).normalized;
         }
 
         public static Vector3 RandomVector3()
         {
-            return new Vector3(Random.Range(0, 1), Random.Range(0, 1), Random.Range(0, 1)).normalized;
+            return new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), Random.Range(-1, 1)).normalized;
         }
 
         public static Vector4 RandomVector4()
         {
-            return new Vector4(Random.Range(0, 1), Random.Range(0, 1), Random.Range(0, 1), Random.Range(0, 1))
+            return new Vector4(Random.Range(-1, 1), Random.Range(-1, 1), Random.Range(-1, 1), Random.Range(-1, 1))
                 .normalized;
         }
 
