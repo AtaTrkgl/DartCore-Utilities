@@ -48,6 +48,9 @@ namespace DartCore.Utilities
             return dict;
         }
 
+        public static bool IsDualshock(ControllerType controller) =>
+            controller == ControllerType.Dualshock3 || controller == ControllerType.Dualshock4; 
+
         private static Dictionary<ControllerType, int> TryIncrementValue(Dictionary<ControllerType, int> dict,
             ControllerType controller)
         {

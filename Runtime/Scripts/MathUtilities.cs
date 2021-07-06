@@ -261,6 +261,22 @@ namespace DartCore.Utilities
             return (heading / distance).normalized;
         }
 
+        /// <summary>
+        /// This method takes in a vector2 and rotates it by the angle given in radians.
+        /// </summary>
+        /// <param name="angle"> The angle to rotate in radians.</param>
+        /// <returns></returns>
+        public static Vector2 RotateVector2(Vector2 vector, float angle)
+        {
+            var cos = Mathf.Cos(angle);
+            var sin = Mathf.Sin(angle);
+                
+            return new Vector2(
+                cos * vector.x - sin * vector.y,
+                sin * vector.x + cos * vector.y
+            );
+        }
+
         #region Audio
 
         public static float FloatToDecibel(float f)
