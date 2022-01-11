@@ -106,6 +106,22 @@ namespace DartCore.Utilities
                 return false;
         }
 
+        /// <summary>
+        /// returns a random item from the given array.
+        /// </summary>
+        public static T GetRandomItem<T>(T[] array)
+        {
+            return array[Random.Range(0, array.Length)];
+        }
+
+        /// <summary>
+        /// returns a random item from the given list.
+        /// </summary>
+        public static T GetRandomItem<T>(List<T> list)
+        {
+            return GetRandomItem(list.ToArray());
+        }
+
         public static Vector2 RandomVector2()
         {
             return new Vector2(Random.Range(-1, 1), Random.Range(-1, 1)).normalized;
@@ -270,7 +286,7 @@ namespace DartCore.Utilities
         {
             var cos = Mathf.Cos(angle);
             var sin = Mathf.Sin(angle);
-                
+
             return new Vector2(
                 cos * vector.x - sin * vector.y,
                 sin * vector.x + cos * vector.y
