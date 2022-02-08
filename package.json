@@ -1,6 +1,6 @@
 {
   "name": "com.dartcore.utilities",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "displayName": "DartCore Utilities",
   "description": "This package contains methods to handle commonly required stuff.",
   "unity": "2018.1",
