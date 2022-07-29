@@ -1,7 +1,9 @@
 {
     "name": "DartCore.Utilities.Editor",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:697df148c8f8ead4f8fa9c4aa617a994"
+    ],
     "includePlatforms": [
         "Editor"
     ],
