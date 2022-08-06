@@ -2,7 +2,7 @@
 
 namespace DartCore.Utilities
 {
-    public class StringUtilities
+    public static class StringUtilities
     {
         /// <summary>
         /// Puts '\n's between words if the line length exceeds the given limit.

@@ -2,7 +2,7 @@
 
 namespace DartCore.Utilities
 {
-    public class CollectionUtilities
+    public static class CollectionUtilities
     {
         public static T[] RemoveDuplicates<T>(T[] array)
         {

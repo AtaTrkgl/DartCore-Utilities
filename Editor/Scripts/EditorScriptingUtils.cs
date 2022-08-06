@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using UnityEditor;
-using UnityEngine.Events;
 
 namespace DartCore.Utilities
 {
-    public class EditorScriptingUtils : Editor
+    public static class EditorScriptingUtils
     {
         public static void HorizontalLine(int height = 1)
         {

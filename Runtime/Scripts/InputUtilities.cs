@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace DartCore.Utilities
 {
-    public class InputUtilities
+    public static class InputUtilities
     {
         public static Dictionary<ControllerType, int> GetControllers()
         {

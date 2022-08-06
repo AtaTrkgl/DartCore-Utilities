@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DartCore.Utilities
 {
-    public class SaveUtilities : MonoBehaviour
+    public static class SaveUtilities
     {
         public static void SaveValue<T>(string fileName, T value)
         {

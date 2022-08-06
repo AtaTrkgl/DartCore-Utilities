@@ -4,7 +4,7 @@ using Random = UnityEngine.Random;
 
 namespace DartCore.Utilities
 {
-    public class MathUtilities
+    public static class MathUtilities
     {
         #region Average
 

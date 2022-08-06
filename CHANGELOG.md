@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.07] - 2022-08-06
+
+### Fixed
+
+-   Fixed a build error caused by `GizmoUtilities` being in the Editor Scripts.
+
+### Added
+
+-   Added new methods to `GizmoUtilities` for drawing crosses.
+-   Added a 3D arrow drawing method to `GizmoUtilities`.
+
+### Changed
+
+-   `GizmoUtilities.DrawArrow2D` now uses the new `GizmoUtilities.DrawArrow` method for drawing arrows.
+-   Made the utility classes static.
+
 ## [1.0.6] - 2022-07-29
 
 ### Added
