@@ -269,6 +269,20 @@ namespace DartCore.Utilities
 
         #endregion
 
+        /// <summary>
+        /// Re-maps a number from one range to another.
+        /// </summary>
+        /// <param name="value">the number</param>
+        /// <param name="from1">start of the original range</param>
+        /// <param name="to1">end of the original range</param>
+        /// <param name="from2">start of the new range</param>
+        /// <param name="to2">end of the new range</param>
+        /// <returns></returns>
+        public static float Map (float value, float from1, float to1, float from2, float to2)
+        {
+            return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
+        }
+        
         public static Vector3 Direction(Vector3 start, Vector3 target)
         {
             var heading = target - start;
