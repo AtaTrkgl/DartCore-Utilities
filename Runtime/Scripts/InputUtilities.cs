@@ -63,7 +63,7 @@ namespace DartCore.Utilities
 
         public static bool IsUsingController()
         {
-            return !string.IsNullOrWhiteSpace(Input.GetJoystickNames()[0]);
+            return Input.GetJoystickNames().Length > 0 && !string.IsNullOrWhiteSpace(Input.GetJoystickNames()[0]);
         }
 
         public static ControllerType GetMainController()
