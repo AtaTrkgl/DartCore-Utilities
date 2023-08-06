@@ -16,8 +16,6 @@ namespace DartCore.Utilities
             if (!IsUsingGamepad()) return GamepadPlatform.None;
 
             var gamepad = GetCurrentGamepad();
-            Debug.Log(Gamepad.all.Aggregate("", (current, g) => current + (g.name + " | ")));
-
             return gamepad switch
             {
                 DualShockGamepad => GamepadPlatform.Playstation,
