@@ -1,8 +1,8 @@
-﻿using System.Linq;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.DualShock;
-using UnityEngine.InputSystem.Switch;
+#if UNITY_EDITOR || UNITY_SWITCH || UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX || UNITY_WSA
+using UnityEngine.InputSystem.Switch; // Switch Pro Controller is not supported on Linux.
+#endif
 
 namespace DartCore.Utilities
 {
@@ -19,12 +19,17 @@ namespace DartCore.Utilities
             return gamepad switch
             {
                 DualShockGamepad => GamepadPlatform.Playstation,
-                SwitchProControllerHID => GamepadPlatform.Nintendo,
+#if UNITY_EDITOR || UNITY_SWITCH || UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX || UNITY_WSA
+                SwitchProControllerHID => GamepadPlatform.Nintendo, // Switch Pro Controller is not supported on Linux.
+#endif
                 _ => GamepadPlatform.Xbox
             };
         }
     }
 
+    /// <summary>
+    /// Switch Pro Controller is not supported on Linux for some reason.
+    /// </summary>
     public enum GamepadPlatform
     {
         None = 0,
