@@ -4,6 +4,8 @@
 [![stargazers](https://img.shields.io/github/stars/AtaTrkgl/DartCore-Utilities?color=yellow)](https://github.com/AtaTrkgl/DartCore-Utilities/stargazers)
 [![release](https://img.shields.io/github/v/release/AtaTrkgl/DartCore-Utilities?color=dark%20green)](https://github.com/AtaTrkgl/DartCore-Utilities/releases)
 
+> ⚠️ DartCore packages are now mainted under _Espale Studios_ over at [espale-studios/espale-unity-packages](https://github.com/espale-studios/espale-unity-packages) as a _monorepo_.
+
 DartCore Utilities is a general purpose package that contains a lot of usefull methods.
 
 [Here](https://github.com/AtaTrkgl/DartCore-Utilities/wiki) is the link to the documentation.
