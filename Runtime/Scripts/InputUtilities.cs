@@ -13,13 +13,17 @@ namespace DartCore.Utilities
 
         public static GamepadPlatform GetGamepadPlatform()
         {
+#if UNITY_SWITCH
+            return GamepadPlatform.Nintendo;
+#endif
+
             if (!IsUsingGamepad()) return GamepadPlatform.None;
 
             var gamepad = GetCurrentGamepad();
             return gamepad switch
             {
                 DualShockGamepad => GamepadPlatform.Playstation,
-#if UNITY_EDITOR || UNITY_SWITCH || UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX || UNITY_WSA
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX || UNITY_WSA
                 SwitchProControllerHID => GamepadPlatform.Nintendo, // Switch Pro Controller is not supported on Linux.
 #endif
                 _ => GamepadPlatform.Xbox
